@@ -1,0 +1,124 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Navigation */
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #ff3b3b;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.service h3 {
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #fff;
+}

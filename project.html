@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSecure University Project</title>
+    <link rel="stylesheet" href="ali.css">
+    <style>
+        /* Extra styles for unified page sections */
+        section { padding: 60px 20px; min-height: 80vh; }
+        .form { max-width: 400px; margin: auto; text-align: center; }
+        .form input { width: 90%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        .form button { width: 95%; padding: 10px; margin-top: 10px; border: none; border-radius: 5px; background-color: #ff6b6b; color: #fff; font-size: 16px; cursor: pointer; }
+        .form button:hover { background-color: #ff3b3b; }
+        .hidden { display: none; }
+        nav a { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">CyberSecure</div>
+            <ul class="nav-links">
+                <li><a onclick="showSection('home')">Home</a></li>
+                <li><a onclick="showSection('courses')">Available Courses</a></li>
+                <li><a onclick="showSection('about')">About</a></li>
+                <li><a onclick="showSection('login')">Login</a></li>
+                <li><a onclick="showSection('signup')">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to CyberSecure</h1>
+            <p>Your gateway to cybersecurity knowledge and services.</p>
+            <button class="btn" onclick="showSection('courses')">Explore Courses</button>
+        </div>
+
+        <div class="services">
+            <h2>Our Services</h2>
+            <div class="service-container">
+                <div class="service">
+                    <h3>Home Security Software Reviews</h3>
+                    <p>Get expert reviews of the latest home security tools and antivirus software to protect your devices.</p>
+                </div>
+                <div class="service">
+                    <h3>Online Privacy Guides</h3>
+                    <p>Learn how to stay safe online, manage your privacy, and protect sensitive data effectively.</p>
+                </div>
+                <div class="service">
+                    <h3>Penetration Testing Services</h3>
+                    <p>Discover professional penetration testing services to identify vulnerabilities in networks and systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="hidden">
+        <h2>Available Courses</h2>
+        <ul>
+            <li>Network Security Fundamentals</li>
+            <li>Ethical Hacking & Penetration Testing</li>
+            <li>Online Privacy & Data Protection</li>
+            <li>Cybersecurity Risk Management</li>
+            <li>Home & IoT Security</li>
+        </ul>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="hidden">
+        <h2>About CyberSecure Project</h2>
+        <p>This university-level project demonstrates a cybersecurity web platform containing information about security software, privacy guides, and penetration testing services. It also includes user authentication through login and signup forms.</p>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="hidden">
+        <h2>Login</h2>
+        <form class="form">
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p style="text-align:center;">Don't have an account? <a onclick="showSection('signup')">Sign Up</a></p>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section id="signup" class="hidden">
+        <h2>Sign Up</h2>
+        <form class="form">
+            <input type="text" placeholder="Full Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="password" placeholder="Confirm Password" required><br>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p style="text-align:center;">Already have an account? <a onclick="showSection('login')">Login</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 CyberSecure. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for section navigation -->
+    <script>
+        function showSection(sectionId) {
+            const sections = ['home','courses','about','login','signup'];
+            sections.forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
